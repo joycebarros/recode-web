@@ -12,8 +12,8 @@ export default () => {
     api.get('/professor').then((response) => {
       const { data } = response;
       setProfessors(data);
-    }).catch((error) => {
-      console.log(error);
+    }).catch(() => {
+      toast.error('Unexpected Error');
     });
   };
 
